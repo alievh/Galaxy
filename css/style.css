@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.galaxy {
+    width: 100%;
+    padding: 71px 0;
+    background-image: url(../images/823503.webp);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.galaxy,
+.mars-line,
+.moon-line,
+.earth-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.meteor {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    /* background-color: orange; */
+    background-image: url("../images/imgbin-meteor-mw5SAB9dZjMxf7tiLbtatfS6T.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 50px 10px yellow;
+    transform: translate(-200px);
+    animation: meteor 2s linear infinite, meteor-destination 0.7s;
+}
+
+@keyframes meteor {
+    0% {
+        transform: translateX(-770px) translateY(-390px);
+    }
+
+    70% {
+        transform: translateX(-116px) translateY(-50px);
+        box-shadow: 0 0 50px 20px orange;
+        width: 13px;
+        height: 13px;
+    }
+
+    100% {
+        transform: translateX(-116px) translateY(-50px);
+        box-shadow: 0 0 50px 50px orange;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.mars-line {
+    position: relative;
+    width: 650px;
+    height: 650px;
+    border: 1px solid gray;
+    border-radius: 50%;
+}
+
+.mars {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: url("../images/kisspng-earth-pioneer-venus-project-planet-solar-system-mars-planet-5ad7c8386739f3.4970702815240909364228.jpg");
+    background-position: center;
+    background-size: cover;
+    animation: mars 6s linear infinite;
+}
+
+@keyframes mars {
+    0% {
+        transform: rotate(0deg) translate(-325px) rotate(0deg);
+
+    }
+
+    100% {
+        transform: rotate(360deg) translate(-325px) rotate(-360deg);
+    }
+}
+
+.earth-line {
+    position: relative;
+    width: 450px;
+    height: 450px;
+    border: 1px solid gray;
+    border-radius: 50%;
+}
+
+.earth {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: url("../images/22-225179_transparent-background-earth-png.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.moon-line {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 1px solid gray;
+    border-radius: 50%;
+    animation: moon-line 4s linear infinite;
+}
+
+@keyframes moon-line {
+    0% {
+        transform: rotate(0deg) translate(-225px) rotate(0deg);
+
+    }
+
+    100% {
+        transform: rotate(360deg) translate(-225px) rotate(-360deg);
+    }
+}
+
+.moon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-image: url("../images/32-322393_small-moon-png-transparent-png.png");
+    background-size: cover;
+    background-position: center;
+    animation: moon 3s linear infinite;
+}
+
+@keyframes moon {
+    0% {
+        transform: rotate(0deg) translate(-50px) rotate(0deg);
+
+    }
+
+    100% {
+        transform: rotate(360deg) translate(-50px) rotate(-360deg);
+    }
+}
+
+.sun {
+    position: absolute;
+    left: 100px;
+    width: 250px;
+    height: 250px;
+    /* background-color: #FCE570; */
+    background-image: url("../images/sun-transparent-background-11549877996b3hvaflom7-removebg-preview.png");
+    background-position: center;
+    background-size: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 30px 20px orange;
+}
+
